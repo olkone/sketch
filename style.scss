@@ -1,0 +1,21 @@
+$grid-size: 550px;
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#grid {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    border: 1px solid black;
+    height: $grid-size;
+    width: $grid-size;
+}
+
+.square {
+    border: 1px solid rgb(219, 219, 219);
+    height: 6.25%;
+    width: 6.25%;
+}
