@@ -3,6 +3,38 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+h1 {
+  align-self: flex-start;
+  padding: 1em 0 0 1em;
+}
+
+#main {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2em;
+  justify-content: center;
+  margin: -3em 0 0 -3em;
+}
+
+#button-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#options,
+#colors {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 #grid {
   display: flex;
   flex-flow: row wrap;
