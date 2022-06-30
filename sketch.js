@@ -1,34 +1,51 @@
-function addSqaures(number) {
+const editBtn = document.querySelector('#edit-button');
+
+function hoverEffect(e) {
+    e.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = 'green';
+    });
+}
+
+function addSqaures(number=16) {
+    // Removes any pre-existing squares when editing the grid
+    document.querySelectorAll('.square').forEach(square => square.remove());
 
     const grid = document.querySelector('#grid');
-    
-    // number arguement represents the length of one side, therefore is squared
+
     for (let i = 0; i < (number ** 2); i++) {
         const square = document.createElement('div');
         grid.appendChild(square);
         square.classList.add('square');
     }
 
-    const squares = document.querySelectorAll('.square');
-    const gridWidth = document.getElementById('grid').offsetWidth;
+    let squares = document.querySelectorAll('.square');
+    const gridWidth = document.querySelector('#grid').offsetWidth;
 
     squares.forEach((square) => {
         square.style.height = `${(gridWidth/number)}px`;
         square.style.width = `${(gridWidth/number)}px`;
     });
+
+    squares.forEach(square => hoverEffect(square));
 }
 
-addSqaures(16);
+function editGrid () {
 
-function hoverEffect(e) {
-    e.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = 'green';
-        setTimeout( () => {
-            e.target.style.backgroundColor = "";
-        }, 500);
-    }, false);
+    editBtn.addEventListener('click', () => {
+
+        // Validate user input
+        let input;
+        while (input < 1 || input > 100 || Number.isInteger(input) === false) {
+            input = Number(prompt("Choose a number between 1 and 100"));
+        }
+        addSqaures(input);
+    });
+
+    // Re-apply hover effect to new grid
+    let squares = document.querySelectorAll('.square');
+    squares.forEach(square => hoverEffect(square));
 }
 
-const squares = document.querySelectorAll('.square');
+window.onload = addSqaures();
 
-squares.forEach(square => hoverEffect(square));
+editBtn.addEventListener('click', editGrid());
