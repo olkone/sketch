@@ -1,11 +1,36 @@
 const editBtn = document.querySelector('#edit-button');
 const clearBtn = document.querySelector('#clear-button');
+const colorBtns = document.querySelectorAll('.color-buttons');
 
-function hoverEffect(e) {
+function hoverEffect(e, color='black') {
     e.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = 'green';
+        e.target.style.backgroundColor = `${color}`;
     });
 }
+
+colorBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const squares = document.querySelectorAll('.square');
+        const btnId = button.getAttribute('id');
+        const random = "#" + ((1<<24)*Math.random() | 0).toString(16);
+
+        switch(btnId) {
+            default:
+                choice = 'red';
+                break;
+
+            case 'bw':
+                choice = 'black';
+                break;
+
+            case 'random-color':
+                choice = random;
+                break;
+
+        }
+        squares.forEach(square => hoverEffect(square, choice));
+    });
+});
 
 function addSqaures(number=16) {
     // Removes any pre-existing squares when editing the grid
