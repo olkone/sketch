@@ -10,14 +10,23 @@
 </head>
 <body>
     <h1>Sketch!</h1>
-    <div id="edit-container">
-        <button id="clear-button">Clear Grid</button>
-        <button id="edit-button">Edit Grid</button>
+    <div id="main">
+        <div id="button-container">
+            <div id="options">
+                <button class="edit-buttons" id="clear-button">Clear Grid</button>
+
+                <div class="slide-container">
+                    <input id="grid-slider" type="range" min="1" max="100" value="16" class="slider">
+                </div>
+            </div>
+            <div id="colors">
+                <button class="color-buttons" id="eraser">Eraser</button>
+                <button class="color-buttons" id="black">Black</button>
+                <button class="color-buttons" id="blue">Blue</button>
+                <button class="color-buttons" id="random-color">Random Color</button>
+            </div>
+        </div>
+        <div id="grid"></div>
     </div>
-    <div id="color-container">
-        <button class="color-buttons" id="bw">Black</button>
-        <button class="color-buttons" id="random-color">Random Color</button>
-    </div>
-    <div id="grid"></div>
 </body>
 </html>
