@@ -1,6 +1,7 @@
 const editBtn = document.querySelector('#edit-button');
 const clearBtn = document.querySelector('#clear-button');
 const colorBtns = document.querySelectorAll('.color-buttons');
+const slider = document.querySelector('#grid-slider');
 
 function hoverEffect(e, color='black') {
     e.addEventListener('mouseover', (e) => {
@@ -16,17 +17,21 @@ colorBtns.forEach(button => {
 
         switch(btnId) {
             default:
-                choice = 'red';
-                break;
-
-            case 'bw':
                 choice = 'black';
+                break;
+                
+            case 'black':
+            case 'blue':
+                choice = btnId;
                 break;
 
             case 'random-color':
                 choice = random;
                 break;
-
+            
+            case 'eraser':
+                choice = 'transparent';
+                break;
         }
         squares.forEach(square => hoverEffect(square, choice));
     });
@@ -55,10 +60,8 @@ function addSqaures(number=16) {
     squares.forEach(square => hoverEffect(square));
 }
 
-function editGrid () {
-
+function editGrid() {
     editBtn.addEventListener('click', () => {
-
         // Validate user input
         let input;
         while (input < 1 || input > 100 || Number.isInteger(input) === false) {
@@ -66,8 +69,15 @@ function editGrid () {
         }
         addSqaures(input);
     });
-
     // Re-apply hover effect to new grid
+    let squares = document.querySelectorAll('.square');
+    squares.forEach(square => hoverEffect(square));
+}
+
+function sliderGrid() {
+    const input = slider.value;
+    addSqaures(input)
+
     let squares = document.querySelectorAll('.square');
     squares.forEach(square => hoverEffect(square));
 }
@@ -81,4 +91,6 @@ function clearGrid() {
 window.onload = addSqaures();
 
 clearBtn.addEventListener('click', clearGrid);
-editBtn.addEventListener('click', editGrid());
+
+
+slider.addEventListener('change', sliderGrid)
