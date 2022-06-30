@@ -1,4 +1,5 @@
 const editBtn = document.querySelector('#edit-button');
+const clearBtn = document.querySelector('#clear-button');
 
 function hoverEffect(e) {
     e.addEventListener('mouseover', (e) => {
@@ -46,6 +47,13 @@ function editGrid () {
     squares.forEach(square => hoverEffect(square));
 }
 
+function clearGrid() {
+    document.querySelectorAll('.square').forEach((square) => {
+        square.style.backgroundColor = 'transparent';}
+    );
+}
+
 window.onload = addSqaures();
 
+clearBtn.addEventListener('click', clearGrid);
 editBtn.addEventListener('click', editGrid());
