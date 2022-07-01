@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.color-buttons');
 const active = document.querySelectorAll('.active');
 
 function makeButtons() {
-    // Create color buttons from array
+    // Create color buttons from array with id of array item
     const colors = ['black', 'gray', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
 
     for (let i = 0; i < colors.length; i++) {
@@ -17,12 +17,22 @@ function makeButtons() {
     }
 }
 
+function clearGrid() {
+    document.querySelectorAll('.square').forEach((square) => {
+        square.style.backgroundColor = 'transparent';
+    });
+}
+
 function buttonToggle(button) {
     button.addEventListener('click', () => {
-        buttons.forEach((e) => {
-            e.classList.remove('active');
-        });
-        button.classList.toggle('active');
+        if (button.id === 'clear-button') {
+            clearGrid();
+        } else {
+            buttons.forEach((e) => {
+                e.classList.remove('active');
+            });
+            button.classList.toggle('active');
+        }
     });
 }
 
