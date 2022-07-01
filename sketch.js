@@ -1,16 +1,30 @@
+window.onload = makeButtons(), makeGrid();
 
 const buttons = document.querySelectorAll('.color-buttons');
 const active = document.querySelectorAll('.active');
 
-buttons.forEach((button) => {
+function makeButtons() {
+    // Create color buttons from array
+    const colors = ['black', 'gray', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
+
+    for (let i = 0; i < colors.length; i++) {
+        const newButton = document.createElement('button');
+        const buttonContainer = document.querySelector('#colors');
+        buttonContainer.appendChild(newButton);
+        newButton.classList.add('color-buttons');
+        newButton.id = colors[i];
+        newButton.style.backgroundColor = colors[i];
+    }
+}
+
+function buttonToggle(button) {
     button.addEventListener('click', () => {
         buttons.forEach((e) => {
-            e.classList.remove('active')
-        })
+            e.classList.remove('active');
+        });
         button.classList.toggle('active');
     });
-});
-
+}
 
 function toggleColor() {
     const activeButton = document.querySelector('.active');
@@ -21,7 +35,6 @@ function toggleColor() {
     } else {
         return newColor;
     }
-    
 }
 
 function changeColor(e) {
@@ -47,4 +60,6 @@ function makeGrid(number=16) {
     });
 }
 
-makeGrid();
+buttons.forEach((button) => {
+    buttonToggle(button);
+});
