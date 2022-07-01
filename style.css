@@ -1,4 +1,5 @@
 * {
+  background-color: rgb(218, 218, 217);
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -12,7 +13,7 @@ body {
 
 h1 {
   align-self: flex-start;
-  padding: 1em 0 0 1em;
+  padding: 0.5em 0 0 1em;
 }
 
 #main {
@@ -37,6 +38,10 @@ h1 {
 #colors {
   display: flex;
   flex-flow: column nowrap;
+}
+
+.color-buttons {
+  height: 3em;
 }
 
 #grid {
