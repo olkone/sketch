@@ -6,7 +6,8 @@ const slider = document.querySelector('#grid-slider');
 
 function makeButtons() {
     // Create color buttons from array items
-    const colors = ['black', 'gray', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
+    // Webpage automatically adjusts to this list
+    const colors = ['black', 'gray', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
 
     // Set html attributes
     for (let i = 0; i < colors.length; i++) {
@@ -24,7 +25,7 @@ function makeButtons() {
 
 function clearGrid() {
     document.querySelectorAll('.square').forEach((square) => {
-        square.style.backgroundColor = 'transparent';
+        square.style.backgroundColor = '#ffffff';
     });
 }
 
@@ -87,11 +88,11 @@ function editGrid() {
 
 function displaySliderValue() {
     const p = document.querySelector('.slide-container p');
-    p.innerText = slider.value;
+    p.innerText = `${slider.value} x ${slider.value}`;
 }
 
 // Listener events
-slider.addEventListener('change', () => {
+slider.addEventListener('input', () => {
     editGrid();
     displaySliderValue();
 });
