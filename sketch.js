@@ -2,6 +2,8 @@ window.onload = makeButtons(), makeGrid();
 
 const buttons = document.querySelectorAll('.color-buttons');
 const active = document.querySelectorAll('.active');
+const slider = document.querySelector('#grid-slider');
+
 
 function makeButtons() {
     // Create color buttons from array with id of array item
@@ -52,6 +54,9 @@ function changeColor(e) {
 }
 
 function makeGrid(number=16) {
+    // Removes any pre-existing squares when editing the grid
+    document.querySelectorAll('.square').forEach(square => square.remove());
+    
     const grid = document.querySelector('#grid');
 
     for (let i = 0; i < (number**2); i++) {
@@ -70,6 +75,12 @@ function makeGrid(number=16) {
     });
 }
 
+function editGrid() {
+    const input = slider.value;
+    makeGrid(input);
+}
+
+slider.addEventListener('change', editGrid);
 buttons.forEach((button) => {
     buttonToggle(button);
 });
