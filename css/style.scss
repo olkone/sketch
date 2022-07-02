@@ -8,16 +8,6 @@ $medium-dark: #909090;
 
 $grid-size: 550px;
 
-
-$grey-120: #e2e3e7;
-$grey-66: #c4c7cf;
-$grey-46: #868d9a;
-$grey-30: #696e79;
-$grey-16: #41454c;
-$grey-13: #35383f;
-$grey-11: #292c31;
-$grey-10: #232529;
-
 * {
     background-color: $dark;
     box-sizing: border-box;
@@ -131,6 +121,7 @@ button {
     display: flex;
     flex-flow: column nowrap;
     gap: 1em;
+    margin-right: 1em;
 }
 
 .slide-container {

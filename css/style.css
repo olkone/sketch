@@ -101,6 +101,7 @@ button {
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
+  margin-right: 1em;
 }
 
 .slide-container {
