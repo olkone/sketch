@@ -6,7 +6,7 @@ $light-medium: #e3e3e3;
 $medium: #d3d3d3;
 $medium-dark: #909090;
 
-$grid-size: 550px;
+$grid-size: 520px;
 
 * {
     background-color: $dark;
@@ -27,6 +27,7 @@ h1,
 h1 a{
     font-size: 36px;
     text-decoration: none;
+    margin-top: 0.6em;
 }
 
 #main {

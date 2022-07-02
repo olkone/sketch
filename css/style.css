@@ -18,6 +18,7 @@ h1,
 h1 a {
   font-size: 36px;
   text-decoration: none;
+  margin-top: 0.6em;
 }
 
 #main {
@@ -27,7 +28,7 @@ h1 a {
   gap: 3em;
   justify-content: center;
   margin: 0 auto 1em;
-  height: 550px;
+  height: 520px;
 }
 
 button {
@@ -164,8 +165,8 @@ p {
   display: flex;
   flex-flow: row wrap;
   flex: auto;
-  height: 550px;
-  width: 550px;
+  height: 520px;
+  width: 520px;
 }
 
 .square {
