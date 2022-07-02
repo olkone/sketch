@@ -14,8 +14,10 @@ body {
   width: 100%;
 }
 
-h1 {
+h1,
+h1 a {
   font-size: 36px;
+  text-decoration: none;
 }
 
 #main {
@@ -24,7 +26,7 @@ h1 {
   flex-flow: row nowrap;
   gap: 3em;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   height: 550px;
 }
 
@@ -35,6 +37,10 @@ button {
   height: 100%;
   width: 10em;
   cursor: pointer;
+}
+
+.color-buttons {
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
 }
 
 #clear-button,
@@ -163,13 +169,36 @@ p {
 }
 
 #footer {
-  font-size: 14px;
-  margin-top: 2em;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 0.5em;
+  justify-content: center;
+  margin-bottom: 1em;
+  padding: 0;
+  width: 100%;
 }
 
-a:hover {
+#footer p,
+#footer a {
+  color: #d3d3d3;
+  font-size: 14px;
+  margin: 2em 0 0;
+}
+
+#footer img {
+  height: 24px;
+  width: auto;
+}
+
+#footer a:hover {
   color: rgb(29, 197, 163);
-  transition-duration: 300ms;
+  transition-duration: 250ms;
+}
+
+#footer img:hover {
+  transform: scale(1.15);
+  transition-duration: 250ms;
 }
 
 /*# sourceMappingURL=style.css.map */
