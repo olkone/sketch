@@ -1,9 +1,27 @@
+$dark: #292c31;
+$darker: #212529;
+$darkest: #0c0e0f;
+$light: #f3f3f3;
+$light-medium: #e3e3e3;
+$medium: #d3d3d3;
+$medium-dark: #909090;
+
 $grid-size: 550px;
 
+
+$grey-120: #e2e3e7;
+$grey-66: #c4c7cf;
+$grey-46: #868d9a;
+$grey-30: #696e79;
+$grey-16: #41454c;
+$grey-13: #35383f;
+$grey-11: #292c31;
+$grey-10: #232529;
+
 * {
-    background-color: #f3f3f3;
+    background-color: $dark;
     box-sizing: border-box;
-    color: #212529;
+    color: $light;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
@@ -30,8 +48,9 @@ h1 {
 }
 
 button {
-    border: 0.75px solid rgb(255, 255, 255);
+    border: none;
     border-radius: 8px;
+    color: $dark;
     height: 100%;
     width: 10em;
     cursor: pointer;
@@ -39,8 +58,8 @@ button {
 
 #clear-button,
 #white {
-    background-color: #fbfbfb;
-    border: 0.75px solid rgb(0, 0, 0, 0.2);
+    background-color: $light;
+    border: 1px solid $light-medium;
     height: 40px;
 }
 
@@ -72,16 +91,28 @@ button {
     transition-duration: .2s;
 }
 
-#clear-button:hover,
-#white:hover {
-    background-color: #e3e3e3;
+#clear-button:hover {
+    background-color: #e04949;
+    border: 1px solid $light-medium;
+    color: #ffffff;
     transform: translateX(0);
 }
 
-#clear-button:active,
-#white.active {
+#white:hover {
+    background-color: $medium;
+    border: 1px solid $light-medium;
+    transform: translateX(0);
+}
+
+#clear-button:active {
     color:#f3f3f3;
-    background-color: #212529;
+    background-color: $darker;
+    transform: translateX(0);
+}
+
+#white.active {
+    background-color: #e9a8af;
+    border-color: $darker;
     transform: translateX(0);
 }
 
@@ -110,11 +141,10 @@ button {
 
 #grid-slider {
     -webkit-appearance: none;
-    background-color: #fbfbfb;
-    border: .25px solid #212529;
-    border-radius: 1px;
-    height: 10px;
-    opacity: 0.7;
+    background-color: $medium-dark;
+    border-radius: 5px;
+    height: 12px;
+    opacity: 0.85;
     -webkit-transition: .2s;
     transition: opacity .2s;
     width: 100%;
@@ -126,26 +156,28 @@ button {
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #212529;
+    width: 18px;
+    height: 18px;
+    background: $light;
+    border-radius: 9px;
     cursor: pointer; 
   }
   
   .slider::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #212529;
+    width: 18px;
+    height: 18px;
+    background: $light;
+    border-radius: 9px;
     cursor: pointer;
   }
 
 p {
     font-size: 14px;
-    margin: 2px 0;
+    margin: 6px 0;
 }
 
 #grid {
-    box-shadow: 0 3px 9px rgb(0, 0, 0, 0.2);
+    box-shadow: 0 3px 9px rgb(0, 0, 0, 0.8);
     display: flex;
     flex-flow: row wrap;
     flex: auto;
@@ -166,6 +198,6 @@ p {
 
 
 a:hover {
-    color: rgb(23, 153, 127);
+    color: rgb(29, 197, 163);
     transition-duration: 300ms;
 }
