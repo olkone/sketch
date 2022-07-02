@@ -84,7 +84,13 @@ button {
 .color-buttons:hover,
 .active {
     transform: translateX(15px);
-    transition-duration: .2s;
+    transition-duration: 200ms;
+}
+
+.color-buttons:active {
+    opacity: 93%;
+    transform: translateX(15px);
+    transition-duration: 0ms;
 }
 
 #clear-button:hover {

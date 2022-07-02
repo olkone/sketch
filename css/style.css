@@ -15,8 +15,7 @@ body {
 }
 
 h1,
-h1 a,
-h1 a:-webkit-any-link {
+h1 a {
   font-size: 36px;
   text-decoration: none;
 }
@@ -65,7 +64,13 @@ button {
 .color-buttons:hover,
 .active {
   transform: translateX(15px);
-  transition-duration: 0.2s;
+  transition-duration: 200ms;
+}
+
+.color-buttons:active {
+  opacity: 93%;
+  transform: translateX(15px);
+  transition-duration: 0ms;
 }
 
 #clear-button:hover {
@@ -187,7 +192,7 @@ p {
   margin: 2em 0 0;
 }
 
-#footer a img {
+#footer img {
   height: 24px;
   width: auto;
 }
