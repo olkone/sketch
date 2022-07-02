@@ -15,7 +15,8 @@ body {
 }
 
 h1,
-h1 a {
+h1 a,
+h1 a:-webkit-any-link {
   font-size: 36px;
   text-decoration: none;
 }
@@ -186,7 +187,7 @@ p {
   margin: 2em 0 0;
 }
 
-#footer img {
+#footer a img {
   height: 24px;
   width: auto;
 }
