@@ -38,3 +38,14 @@
 * Chrome DevTools
 * Sass
 * Mac Terminal
+
+# 
+## Check out some of my other projects!
+* Python Typing Game
+    * [Repository](https://github.com/olkone/typing-game)
+* Rock, Paper, Scissors
+    * [Live Page](https://olkone.github.io/rock-paper-scissors/)
+    * [Repository](https://github.com/olkone/rock-paper-scissors/)
+* Writing Portfolio Webpage
+    * [Live Page](https://olkone.github.io/writing-portfolio/)
+    * [Repository](https://github.com/olkone/writing-portfolio)
