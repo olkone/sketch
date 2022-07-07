@@ -41,6 +41,9 @@
 
 # 
 ## Check out some of my other projects!
+* JavaScript Calculator
+   * [Live Page](https://olkone.github.io/calculator/)
+   * [Repository](https://github.com/olkone/calculator)
 * Python Typing Game
     * [Repository](https://github.com/olkone/typing-game)
 * Rock, Paper, Scissors
