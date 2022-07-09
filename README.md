@@ -39,8 +39,17 @@
 * Sass
 * Mac Terminal
 
-# 
+## Reflection
+* Some future features I would like to add:
+    * Click-and-drag instead of mouseover to color
+    * Toggle colors and tools with keyboard input
+        * or provide a color-picker
+    * Save and download the canvas as an image file
+
 ## Check out some of my other projects!
+* JavaScript Calculator
+   * [Live Page](https://olkone.github.io/calculator/)
+   * [Repository](https://github.com/olkone/calculator)
 * Python Typing Game
     * [Repository](https://github.com/olkone/typing-game)
 * Rock, Paper, Scissors
