@@ -47,6 +47,9 @@
     * Save and download the canvas as an image file
 
 ## Check out some of my other projects!
+* Admin Dashboard
+    * [Live Page](https://olkone.github.io/admin-dashboard/)
+    * [Repository](https://github.com/olkone/admin-dashboard)
 * JavaScript Calculator
    * [Live Page](https://olkone.github.io/calculator/)
    * [Repository](https://github.com/olkone/calculator)
@@ -55,6 +58,9 @@
 * Rock, Paper, Scissors
     * [Live Page](https://olkone.github.io/rock-paper-scissors/)
     * [Repository](https://github.com/olkone/rock-paper-scissors/)
+* Sign-Up Form
+    * [Live Page](https://olkone.github.io/sign-up-form/)
+    * [Repository](https://github.com/olkone/sign-up-form)
 * Writing Portfolio Webpage
     * [Live Page](https://olkone.github.io/writing-portfolio/)
     * [Repository](https://github.com/olkone/writing-portfolio)
