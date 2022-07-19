@@ -50,6 +50,9 @@
 * Admin Dashboard
     * [Live Page](https://olkone.github.io/admin-dashboard/)
     * [Repository](https://github.com/olkone/admin-dashboard)
+* Library
+    * [Live Page](https://olkone.github.io/library/)
+    * [Repository](https://github.com/olkone/library)
 * JavaScript Calculator
    * [Live Page](https://olkone.github.io/calculator/)
    * [Repository](https://github.com/olkone/calculator)
